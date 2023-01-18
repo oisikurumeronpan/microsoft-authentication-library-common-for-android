@@ -36,6 +36,7 @@ if (project.hasProperty("distCommon4jVersion") && project.distCommon4jVersion !=
 }
 
 android {
+    publishNonDefault true
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
