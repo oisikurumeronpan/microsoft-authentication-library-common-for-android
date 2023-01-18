@@ -94,6 +94,7 @@ public class MicrosoftStsAccountCredentialAdapter
                             response.getScope()
                     )
             );
+            accessToken.setRequestedClaims(request.getClaims());
             accessToken.setCachedAt(String.valueOf(cachedAt)); // generated @ client side
             accessToken.setExpiresOn(String.valueOf(expiresOn));
             accessToken.setRefreshOn(String.valueOf(refreshOn));
