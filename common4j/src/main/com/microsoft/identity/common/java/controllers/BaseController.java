@@ -319,6 +319,7 @@ public abstract class BaseController {
         }
 
         builder.setScope(StringUtil.join(" ", scopes));
+        builder.setClaims(parameters.getClaimsRequestJson());
 
         return builder;
     }
