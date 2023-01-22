@@ -1,3 +1,2 @@
 install:
-  - ./gradlew common4j:clean common4j:assemble common4j:publishToMavenLocal -Psugar=true
-  - ./gradlew assembleLocalRelease publishLocalReleasePublicationToMavenLocal -Psugar=true
+  - ./gradlew clean assembleLocalRelease publishLocalReleasePublicationToMavenLocal common4j:publishToMavenLocal -Psugar=true
