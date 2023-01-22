@@ -707,7 +707,7 @@ public class MsalOAuth2TokenCache
                 account.getRealm(),
                 target,
                 authScheme.getName(),
-                null,
+                requestedClaims,
                 kid
                 );
 
