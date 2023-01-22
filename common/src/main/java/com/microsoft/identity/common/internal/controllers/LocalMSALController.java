@@ -311,6 +311,7 @@ public class LocalMSALController extends BaseController {
         @SuppressWarnings(WarningType.unchecked_warning) final List<ICacheRecord> cacheRecords = tokenCache.loadWithAggregatedAccountData(
                 parametersWithScopes.getClientId(),
                 TextUtils.join(" ", parametersWithScopes.getScopes()),
+                parametersWithScopes.getClaimsRequestJson(),
                 targetAccount,
                 authScheme
         );

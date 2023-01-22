@@ -367,6 +367,7 @@ public class BrokerOAuth2TokenCache
         return cache.loadWithAggregatedAccountData(
                 clientId,
                 target,
+                null,
                 cacheRecord.getAccount(),
                 authScheme
         );
@@ -529,6 +530,7 @@ public class BrokerOAuth2TokenCache
     @Override
     public ICacheRecord load(@NonNull final String clientId,
                              @Nullable final String target,
+                             @Nullable final String requestedClaims,
                              @NonNull final AccountRecord account,
                              @NonNull final AbstractAuthenticationScheme authScheme) {
         final String methodName = ":load";
@@ -583,6 +585,7 @@ public class BrokerOAuth2TokenCache
             resultRecord = targetCache.load(
                     clientId,
                     target,
+                    requestedClaims,
                     account,
                     authScheme
             );
@@ -622,6 +625,7 @@ public class BrokerOAuth2TokenCache
      *
      * @param clientId The ClientId of the current app.
      * @param target   The 'target' (scopes) the requested token should contain.
+     * @param requestedClaims The claims of requested token should contain.
      * @param account  The Account whose Credentials should be loaded.
      * @return A List of ICacheRecords for the supplied filter criteria.
      */
@@ -629,6 +633,7 @@ public class BrokerOAuth2TokenCache
     @Override
     public List<ICacheRecord> loadWithAggregatedAccountData(@NonNull final String clientId,
                                                             @Nullable final String target,
+                                                            @Nullable final String requestedClaims,
                                                             @NonNull final AccountRecord account,
                                                             @NonNull final AbstractAuthenticationScheme authScheme) {
         synchronized (this) {
@@ -691,6 +696,7 @@ public class BrokerOAuth2TokenCache
                 resultRecords = targetCache.loadWithAggregatedAccountData(
                         clientId,
                         target,
+                        requestedClaims,
                         account,
                         authScheme
                 );

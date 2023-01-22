@@ -682,6 +682,7 @@ public class MsalOAuth2TokenCache
     @Override
     public ICacheRecord load(@NonNull final String clientId,
                              @Nullable final String target,
+                             @Nullable final String requestedClaims,
                              @NonNull final AccountRecord account,
                              @NonNull final AbstractAuthenticationScheme authScheme) {
         Telemetry.emit(new CacheStartEvent());
@@ -868,12 +869,13 @@ public class MsalOAuth2TokenCache
     @Override
     public List<ICacheRecord> loadWithAggregatedAccountData(@NonNull final String clientId,
                                                             @Nullable final String target,
+                                                            @Nullable final String requestedClaims,
                                                             @NonNull final AccountRecord account,
                                                             @NonNull final AbstractAuthenticationScheme authScheme) {
         synchronized (this) {
             final List<ICacheRecord> result = new ArrayList<>();
 
-            final ICacheRecord primaryCacheRecord = load(clientId, target, account, authScheme);
+            final ICacheRecord primaryCacheRecord = load(clientId, target, requestedClaims, account, authScheme);
 
             // Set this result as the 0th entry in the result...
             result.add(primaryCacheRecord);

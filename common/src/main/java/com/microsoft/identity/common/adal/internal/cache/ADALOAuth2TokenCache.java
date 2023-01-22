@@ -213,6 +213,7 @@ public class ADALOAuth2TokenCache
     public ICacheRecord load(
             final String clientId,
             final String target,
+            final String requestedClaims,
             final AccountRecord account,
             final AbstractAuthenticationScheme scheme) {
         throw new UnsupportedOperationException(
@@ -223,6 +224,7 @@ public class ADALOAuth2TokenCache
     @Override
     public List<ICacheRecord> loadWithAggregatedAccountData(final String clientId,
                                                             final String target,
+                                                            final String requestedClaims,
                                                             final AccountRecord account,
                                                             final AbstractAuthenticationScheme scheme) {
         throw new UnsupportedOperationException(

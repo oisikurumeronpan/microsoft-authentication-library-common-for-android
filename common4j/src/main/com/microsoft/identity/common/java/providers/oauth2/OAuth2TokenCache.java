@@ -102,12 +102,14 @@ public abstract class OAuth2TokenCache
      *
      * @param clientId The ClientId of the current app.
      * @param target   The 'target' (scopes) the requested token should contain.
+     * @param requestedClaims The claims of requested token should contain.
      * @param account  The Account whose Credentials should be loaded.
      * @return The resulting ICacheRecord. Entries may be empty if not present in the cache.
      */
     public abstract ICacheRecord load(
             final String clientId,
             final String target,
+            final String requestedClaims,
             final AccountRecord account,
             final AbstractAuthenticationScheme authScheme
     );
@@ -119,12 +121,14 @@ public abstract class OAuth2TokenCache
      *
      * @param clientId The ClientId of the current app.
      * @param target   The 'target' (scopes) the requested token should contain.
+     * @param requestedClaims The claims of requested token should contain.
      * @param account  The Account whose Credentials should be loaded.
      * @return The resulting ICacheRecord. Entries may be empty if not present in the cache.
      */
     public abstract List<ICacheRecord> loadWithAggregatedAccountData(
             final String clientId,
             final String target,
+            final String requestedClaims,
             final AccountRecord account,
             final AbstractAuthenticationScheme authenticationScheme
     );

@@ -620,6 +620,7 @@ public abstract class BaseController {
         final List<ICacheRecord> cacheRecords = cache.loadWithAggregatedAccountData(
                 parameters.getClientId(),
                 StringUtil.join(" ", parameters.getScopes()),
+                parameters.getClaimsRequestJson(),
                 targetAccount,
                 authScheme
         );
