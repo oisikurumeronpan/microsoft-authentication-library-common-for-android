@@ -1,2 +1,4 @@
+jdk:
+  - openjdk11
 install:
   - ./gradlew clean assembleLocalRelease publishLocalReleasePublicationToMavenLocal common4j:publishToMavenLocal -Psugar=true
