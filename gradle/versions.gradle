@@ -53,10 +53,10 @@ ext {
     adalLatest = "3.1.1"
 
     //#### The following are TSL version variables - BEGIN
-    projectCompileSdkVersion = 29
+    projectCompileSdkVersion = 33
     projectBuildToolsVersion = '28.0.3'
     projectMinSdkVersion = 14
-    projectTargetSdkVersion = 29
+    projectTargetSdkVersion = 33
 
     projectVersionCode = 1
     projectVersionName = "1.5.9"
