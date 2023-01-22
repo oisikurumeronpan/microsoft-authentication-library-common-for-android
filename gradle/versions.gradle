@@ -5,7 +5,7 @@ ext {
     automationAppMinSDKVersion = 21
     targetSdkVersion = 33
     compileSdkVersion = 33
-    buildToolsVersion = "28.0.3"
+    buildToolsVersion = '33.0.1'
 
     // Plugins
     gradleVersion = '4.1.0'
@@ -54,7 +54,7 @@ ext {
 
     //#### The following are TSL version variables - BEGIN
     projectCompileSdkVersion = 33
-    projectBuildToolsVersion = '28.0.3'
+    projectBuildToolsVersion = '33.0.1'
     projectMinSdkVersion = 14
     projectTargetSdkVersion = 33
 
